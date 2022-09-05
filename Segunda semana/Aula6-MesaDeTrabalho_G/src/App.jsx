@@ -1,7 +1,15 @@
+/* 
+  - Prof Marcos V. Martins
+  - Possível solução para a mesa de trabalho da Aula 6
+*/
+
+/* CSS Normal */
 import './App.css'
 import React from 'react'
+/* Importando um componente */
+import HomeComponent from './components/Home';
 
-/* Array de cidades que deve ser utilizado */
+/* Array de cidades que deve ser utilizado na atividade */
 const cities = [
   {
     id: 1,
@@ -76,32 +84,12 @@ const cities = [
   }
 ];
 
-/* Componente funcional que recebe lista de cidades, verifica e as renderiza em tela */
-function RenderizaCidades(props) {
-  return (
-    <div>
-      {props.items.map((item) => {
-        if (item.country == "BRA") {
-          return <React.Fragment key={item.id} >
-            <h2>ID {item.id}</h2>
-            <h1 style={{ color: item.color }}>{item.city}</h1> {/* Utilizando a cor que foi recebida junto no objeto JS */}
-            <h3>{item.country}</h3>
-            <p>{item.population}</p>
-          </React.Fragment>
-        }
-      })}
-    </div>
-  );
-}
 
 function App() {
 
   return (
     <div className="App">
-      <React.Fragment>
-        {/* Componente que renderiza as cidades específicas */}
-        <RenderizaCidades items={cities} />
-      </React.Fragment>
+        <HomeComponent items={cities} />
     </div>
   )
 }

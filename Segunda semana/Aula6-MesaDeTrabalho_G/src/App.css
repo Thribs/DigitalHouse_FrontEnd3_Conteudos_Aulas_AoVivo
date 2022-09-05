@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+/* CSS Normal */
+h1, h2, h3, p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  background-color: gainsboro;
+}
+
+
